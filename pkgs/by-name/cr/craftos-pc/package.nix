@@ -71,6 +71,8 @@ stdenv.mkDerivation rec {
   '';
 
   patches = [
+    # fix includes of poco headers
+    # https://github.com/trofi/nixpkgs/pull/5
     ./fix-poco-header-includes.patch
   ];
 
