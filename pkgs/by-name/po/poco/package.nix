@@ -60,7 +60,7 @@ stdenv.mkDerivation rec {
   patches = [
     # poco builds its own version of pcre, disable it
     # https://github.com/pocoproject/poco/issues/4871
-    ./disable-internal-pcre-files-for-non-static-builds.patch
+    ./disable-internal-pcre-files-for-static-builds.patch
   ];
 
   postFixup = ''
