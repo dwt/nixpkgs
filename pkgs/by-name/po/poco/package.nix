@@ -36,6 +36,7 @@ stdenv.mkDerivation rec {
     utf8proc
     libmysqlclient
   ];
+
   propagatedBuildInputs = [
     zlib
     pcre2
@@ -58,7 +59,7 @@ stdenv.mkDerivation rec {
   ];
 
   patches = [
-    # poco builds its own version of pcre, disable it
+    # poco builds its own version of pcre, disable it for static builds
     # https://github.com/pocoproject/poco/issues/4871
     ./disable-internal-pcre-files-for-static-builds.patch
   ];
